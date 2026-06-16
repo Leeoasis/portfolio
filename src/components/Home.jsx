@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import '../styles/Home.css';
 import Typed from 'typed.js';
 import { useRef, useEffect } from 'react';
 
@@ -33,9 +32,9 @@ const HomeImg = () => {
           a palette of Animation Libraries, each adding a unique hue to my vibrant portfolio.
         </p> 
         <div className="my-buttons-container">
-            <Link to={"/Projects"} className="home-buttons">Projects</Link>
-            <Link to={"/Contact"} className="home-buttons">Contact</Link>
-            <Link to={"/About"} className="home-buttons">About Me</Link>
+            <Link to={"/projects"} className="home-buttons">Projects</Link>
+            <Link to={"/contact"} className="home-buttons">Contact</Link>
+            <Link to={"/about"} className="home-buttons">About Me</Link>
           </div>
         </div>
         </div>

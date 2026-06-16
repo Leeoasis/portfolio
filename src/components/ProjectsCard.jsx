@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import '../styles/ProjectsCard.css';
 
 const ProjectsCard = ({ imgsrc, title, text, live, source }) => {
   const [isActive, setIsActive] = useState(false);
@@ -32,8 +30,16 @@ const ProjectsCard = ({ imgsrc, title, text, live, source }) => {
           {truncateDescription(text, 100)}
         </p>
         <div className="project-btns">
-          <NavLink to={live} className="live-btn projects-btn" target='__blank'>Live</NavLink>
-          <NavLink to={source} className="source-btn projects-btn" target='__blank'>Source</NavLink>
+          {live && (
+            <a href={live} className="live-btn projects-btn" target="_blank" rel="noopener noreferrer">
+              Live
+            </a>
+          )}
+          {source && (
+            <a href={source} className="source-btn projects-btn" target="_blank" rel="noopener noreferrer">
+              Source
+            </a>
+          )}
         </div>
       </div>
     </div>

@@ -1,6 +1,5 @@
 // SideCard.js
 import React from 'react';
-import '../styles/SideCard.css';
 import myImage from '../assets/IMG_1207.jpg';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -14,7 +13,7 @@ import {
 const SideCard = () => {
   return (
     <div className="left-sidebar">
-        <div className="side-bar-header d-flex align-items-center justify-content-between">
+        <div className="side-bar-header">
             <h2 className="logo-name">Leslie</h2>
             <span className="designation">Full Stack Developer</span>
         </div>
@@ -22,7 +21,7 @@ const SideCard = () => {
         <h2 className="email">leeegd99@gmail.com</h2>
         <h2 className="address">Based in CapeTown, SA</h2>
         <p className="copyright"> @2023 Leslie. All Rights Reserved</p>
-        <div className="social-profile d-flex align-items-center flex-wrap ">
+        <div className="social-profile">
       <a href="https://github.com/Leeoasis" target="_blank" rel="noopener noreferrer">
         <FontAwesomeIcon icon={faGithub} />
       </a>
@@ -36,7 +35,7 @@ const SideCard = () => {
         <FontAwesomeIcon icon={faInstagram} />
       </a>
     </div>
-    <Link to={"/Contact"} className="theme-btn">Hire me!</Link>
+    <Link to={"/contact"} className="theme-btn">Hire me!</Link>
     </div>
   );
 };

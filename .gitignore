@@ -10,6 +10,8 @@
 
 # production
 /build
+/dist
+/tmp-visual
 
 # misc
 .DS_Store

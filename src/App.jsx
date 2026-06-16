@@ -6,7 +6,7 @@ import ProjectsPage from './routes/ProjectsPage';
 import SkillsPage from './routes/SkillsPage';
 import AboutPage from './routes/AboutPage';
 import ContactPage from './routes/ContactPage';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import MobileFooter from './components/MobileFooter';
 
 function App() {
   return (
@@ -21,6 +21,7 @@ function App() {
       <Route path="/about" element={<AboutPage />} />
       <Route path="/contact" element={<ContactPage />} />
     </Routes>
+    <MobileFooter />
     </Router>
    </>
   );
