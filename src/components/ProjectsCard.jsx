@@ -24,9 +24,9 @@ const ProjectsCard = ({ imgsrc, title, text, live, source }) => {
                   Your browser does not support the video tag.
             </video>
 
-      <h2 className="project-title">{title}</h2>
-      <div>
-      <p className="project-description">
+      <div className="project-card-body">
+        <h2 className="project-title">{title}</h2>
+        <p className="project-description">
           {truncateDescription(text, 100)}
         </p>
         <div className="project-btns">

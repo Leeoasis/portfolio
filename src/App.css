@@ -132,7 +132,7 @@
   }
 
   .designation {
-    @apply max-w-[9rem] text-right text-sm leading-snug text-white/80;
+    @apply max-w-[11rem] text-right text-sm leading-snug text-white/80;
   }
 
   .sideImage {
@@ -173,12 +173,28 @@
     @apply w-full px-8 py-3 uppercase;
   }
 
+  .hero-kicker {
+    @apply mb-4 inline-flex rounded-full border border-accent/30 bg-accent/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.24em] text-accent;
+  }
+
   .home-heading {
-    @apply max-w-5xl text-5xl font-normal leading-tight sm:text-[3.5rem] lg:text-[4.75rem] xl:text-[5rem];
+    @apply max-w-5xl text-[3.25rem] font-normal leading-[1.05] sm:text-[3.75rem] lg:text-[4.5rem] xl:text-[4.75rem];
+  }
+
+  .typed-role {
+    @apply inline-block min-h-[1.15em] text-white;
   }
 
   .home-para {
-    @apply mt-8 max-w-5xl text-base leading-8 text-muted sm:text-lg lg:text-xl;
+    @apply mt-8 max-w-4xl text-base leading-8 text-white/75 sm:text-lg lg:text-xl;
+  }
+
+  .hero-highlight-grid {
+    @apply mt-8 grid max-w-4xl gap-3 sm:grid-cols-3;
+  }
+
+  .hero-highlight-grid span {
+    @apply rounded-2xl border border-white/10 bg-white/[0.06] px-4 py-3 text-sm font-semibold text-white/85 backdrop-blur-sm;
   }
 
   .my-buttons-container {
@@ -195,16 +211,40 @@
     @apply mb-8 text-3xl font-bold uppercase text-white sm:text-4xl;
   }
 
-  .about-content {
-    @apply max-w-6xl;
+  .about-kicker {
+    @apply mb-4 inline-flex rounded-full border border-accent/30 bg-accent/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.24em] text-accent;
   }
 
-  .about-image-container {
-    @apply grid items-start gap-8 xl:grid-cols-[18rem_1fr];
+  .about-heading {
+    @apply max-w-5xl normal-case leading-tight sm:text-5xl;
+  }
+
+  .about-content {
+    @apply max-w-6xl space-y-8;
+  }
+
+  .about-hero-grid {
+    @apply grid items-start gap-8 xl:grid-cols-[20rem_1fr];
+  }
+
+  .about-image-panel {
+    @apply rounded-[32px] border border-white/10 bg-white/[0.05] p-5 shadow-2xl shadow-black/20 backdrop-blur-sm;
   }
 
   .about-image {
-    @apply mx-auto max-h-[24rem] w-full max-w-xs rounded-[28px] object-contain sm:max-w-sm xl:mx-0;
+    @apply mx-auto max-h-[27rem] w-full max-w-xs object-contain sm:max-w-sm xl:max-w-full;
+  }
+
+  .about-location-card {
+    @apply mt-4 flex items-center justify-center gap-2 rounded-2xl border border-white/10 bg-midnight/70 px-4 py-3 text-sm font-semibold text-white/85;
+  }
+
+  .about-location-card svg {
+    @apply text-accent;
+  }
+
+  .about-text {
+    @apply rounded-[32px] border border-white/10 bg-white/[0.05] p-5 shadow-2xl shadow-black/20 backdrop-blur-sm sm:p-7;
   }
 
   .about-title {
@@ -212,43 +252,107 @@
   }
 
   .my-text {
-    @apply mb-6 text-lg italic leading-8 text-white/85;
-  }
-
-  .custom-social {
-    @apply my-8 max-w-4xl;
-  }
-
-  .custom-list {
-    @apply grid list-none gap-4 p-0 md:grid-cols-2;
-  }
-
-  .custom-list li {
-    @apply flex min-w-0 items-start gap-2 text-base leading-7 text-white/90 sm:text-lg;
-  }
-
-  .custom-list span {
-    @apply break-words text-muted;
+    @apply mb-5 text-lg italic leading-8 text-white/85;
   }
 
   .green {
     @apply mt-1 shrink-0 text-accent;
   }
 
-  .custom-list strong {
-    @apply shrink-0 font-bold text-white;
+  .about-para {
+    @apply mb-6 max-w-4xl text-base leading-8 text-white/75 sm:text-lg;
   }
 
-  .about-para {
-    @apply mb-8 max-w-4xl text-lg leading-8 text-white/85;
+  .about-stat-grid {
+    @apply mb-6 grid gap-3 sm:grid-cols-3;
+  }
+
+  .about-stat-grid div {
+    @apply rounded-2xl border border-white/10 bg-midnight/50 p-4;
+  }
+
+  .about-stat-grid strong {
+    @apply block text-2xl font-bold text-white;
+  }
+
+  .about-stat-grid span {
+    @apply mt-1 block text-sm font-semibold text-muted;
+  }
+
+  .about-actions {
+    @apply flex flex-wrap gap-3;
   }
 
   .resume-btn {
-    @apply px-8 py-3;
+    @apply gap-2 px-8 py-3;
   }
 
-  .resume-btn a {
-    @apply no-underline;
+  .about-contact-btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/10 px-8 py-3 font-bold text-white no-underline transition duration-300 hover:border-accent hover:text-accent;
+  }
+
+  .about-info-grid {
+    @apply grid gap-4 md:grid-cols-2 xl:grid-cols-3;
+  }
+
+  .about-info-card {
+    @apply flex min-w-0 gap-3 rounded-2xl border border-white/10 bg-white/[0.05] p-4 backdrop-blur-sm;
+  }
+
+  .about-info-card strong {
+    @apply block text-sm uppercase tracking-wide text-white;
+  }
+
+  .about-info-card span {
+    @apply mt-1 block break-words text-sm text-muted;
+  }
+
+  .about-focus-card {
+    @apply grid gap-6 rounded-[32px] border border-accent/25 bg-gradient-to-br from-accent/10 via-white/[0.04] to-cyan-400/10 p-5 shadow-2xl shadow-black/20 sm:p-7 lg:grid-cols-[0.9fr_1.1fr];
+  }
+
+  .about-focus-card h3 {
+    @apply m-0 text-2xl font-bold text-white sm:text-3xl;
+  }
+
+  .about-focus-card ul {
+    @apply m-0 grid list-none gap-3 p-0;
+  }
+
+  .about-focus-card li {
+    @apply flex items-start gap-2 text-base leading-7 text-white/80;
+  }
+
+  .about-hobbies-card {
+    @apply grid gap-6 rounded-[32px] border border-white/10 bg-white/[0.05] p-5 shadow-2xl shadow-black/20 backdrop-blur-sm sm:p-7 lg:grid-cols-[0.85fr_1.15fr];
+  }
+
+  .about-hobbies-card h3 {
+    @apply m-0 text-2xl font-bold text-white sm:text-3xl;
+  }
+
+  .about-hobbies-card p {
+    @apply mb-0 mt-4 text-base leading-7 text-white/75;
+  }
+
+  .hobbies-grid {
+    @apply grid gap-3 sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3;
+  }
+
+  .hobby-item {
+    @apply flex min-h-40 flex-col justify-between rounded-2xl border border-white/10 bg-midnight/50 p-4 transition duration-300 hover:-translate-y-1 hover:border-accent/50 hover:bg-white/[0.08];
+  }
+
+  .hobby-item svg {
+    @apply mb-4 h-8 w-8 text-accent;
+  }
+
+  .hobby-item strong {
+    @apply text-lg text-white;
+  }
+
+  .hobby-item span {
+    @apply mt-2 text-sm leading-6 text-muted;
   }
 
   .section-title h2 {
@@ -291,6 +395,10 @@
     @apply bg-yellow-300 text-black;
   }
 
+  .sk-learning {
+    @apply bg-cyan-300 text-black;
+  }
+
   .bar {
     @apply h-3 w-full overflow-hidden rounded-full bg-white/15;
   }
@@ -303,16 +411,48 @@
     @apply mt-12;
   }
 
+  .learning-card {
+    @apply mt-10 grid gap-6 rounded-3xl border border-accent/30 bg-gradient-to-br from-accent/15 via-white/[0.05] to-cyan-400/10 p-6 shadow-2xl shadow-black/20 md:grid-cols-[1fr_auto];
+  }
+
+  .learning-label {
+    @apply mb-3 inline-flex rounded-full bg-accent px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-black;
+  }
+
+  .learning-card h3 {
+    @apply m-0 text-2xl font-bold text-white sm:text-3xl;
+  }
+
+  .learning-card p {
+    @apply mb-0 mt-3 max-w-3xl text-base leading-7 text-white/75;
+  }
+
+  .learning-pills {
+    @apply flex flex-wrap content-start gap-2 md:max-w-xs md:justify-end;
+  }
+
+  .learning-pills span {
+    @apply rounded-full border border-white/10 bg-midnight/60 px-3 py-2 text-sm font-semibold text-white/85;
+  }
+
   .interests-grid {
     @apply grid gap-4 sm:grid-cols-2 xl:grid-cols-4;
   }
 
   .icon-box {
-    @apply flex min-h-24 items-center justify-center gap-3 rounded-xl border border-white/10 bg-white/10 p-5 text-center;
+    @apply flex min-h-24 items-center justify-center gap-3 rounded-xl border border-white/10 bg-white/10 p-5 text-center transition duration-300 hover:-translate-y-1 hover:border-accent/50 hover:bg-white/[0.14];
   }
 
   .icon-box h3 {
     @apply m-0 text-base font-semibold sm:text-lg;
+  }
+
+  .icon-box svg {
+    @apply h-8 w-8 text-accent;
+  }
+
+  .highlight-skill {
+    @apply border-accent/30 bg-accent/10;
   }
 
   .projects-container {
@@ -323,24 +463,20 @@
     @apply mx-auto max-w-2xl text-lg leading-8 text-accent lg:mx-0;
   }
 
-  .projects-carousel-shell {
-    @apply max-w-6xl overflow-hidden;
-  }
-
-  .projects-carousel {
-    @apply overflow-visible;
-  }
-
-  .carousel-item-padding-40-px {
-    @apply px-2 sm:px-3;
+  .projects-grid {
+    @apply grid max-w-6xl gap-5 md:grid-cols-2;
   }
 
   .project-card {
-    @apply h-full rounded-2xl border border-white/10 bg-white/[0.04] p-4 shadow-xl shadow-black/20 transition duration-300 hover:-translate-y-1 hover:border-accent/50;
+    @apply flex h-full flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/[0.05] p-4 shadow-xl shadow-black/20 backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-accent/50 hover:bg-white/[0.08];
   }
 
   .project-card video {
-    @apply h-56 w-full rounded-xl object-cover sm:h-64 lg:h-56 xl:h-64;
+    @apply h-56 w-full rounded-2xl object-cover sm:h-64 lg:h-56 xl:h-60;
+  }
+
+  .project-card-body {
+    @apply flex flex-1 flex-col;
   }
 
   .project-title {
@@ -348,7 +484,7 @@
   }
 
   .project-description {
-    @apply min-h-20 text-base leading-7 text-white/85;
+    @apply flex-1 text-base leading-7 text-white/85;
   }
 
   .project-btns {
@@ -361,7 +497,11 @@
   }
 
   .contact-heading {
-    @apply text-center lg:text-left;
+    @apply mb-3 text-center lg:text-left;
+  }
+
+  .contact-intro {
+    @apply mx-auto mb-6 max-w-3xl text-center text-base leading-7 text-white/75 sm:text-lg lg:mx-0 lg:text-left;
   }
 
   .contact-form {

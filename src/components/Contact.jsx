@@ -81,8 +81,11 @@ const Contact = () => {
       <div className="content">
         <div className="heading">
           <h1 className="contact-heading">Contact Me</h1>
+          <p className="contact-intro">
+            Got a project, role, collaboration, or a bug with dramatic timing? Send it through and I will get back to you.
+          </p>
           {isSubmitted ? (
-            <p className="success-message">Form submitted successfully!</p>
+            <p className="success-message">Message sent successfully. I will reply soon, after the inbox does its tiny victory lap.</p>
           ) : (
             <form className="contact-form" onSubmit={handleSubmit}>
               <div className="form-group">
@@ -127,7 +130,7 @@ const Contact = () => {
                 )}
               </div>
               <button className="submit-btn" type="submit">
-                Submit
+                Send Message
               </button>
             </form>
           )}

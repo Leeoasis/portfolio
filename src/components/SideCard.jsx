@@ -15,12 +15,12 @@ const SideCard = () => {
     <div className="left-sidebar">
         <div className="side-bar-header">
             <h2 className="logo-name">Leslie</h2>
-            <span className="designation">Full Stack Developer</span>
+            <span className="designation">Full Stack & React Native Developer</span>
         </div>
         <img className="sideImage" src={myImage} alt="my logo" />
         <h2 className="email">leeegd99@gmail.com</h2>
         <h2 className="address">Based in CapeTown, SA</h2>
-        <p className="copyright"> @2023 Leslie. All Rights Reserved</p>
+        <p className="copyright"> @2023 Leslie. Built with care and a suspicious amount of coffee.</p>
         <div className="social-profile">
       <a href="https://github.com/Leeoasis" target="_blank" rel="noopener noreferrer">
         <FontAwesomeIcon icon={faGithub} />

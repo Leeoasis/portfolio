@@ -10,6 +10,22 @@ import Jest from '../assets/jest.png'
 import JQuery from '../assets/jquery.png'
 import Django from '../assets/django.png'
 import Bootstrap from '../assets/bootstrap.png'
+import { SiExpo, SiReact, SiTailwindcss, SiTypescript } from 'react-icons/si'
+import { TbRoute } from 'react-icons/tb'
+
+const skills = [
+  { name: 'HTML', level: 'Expert', badge: 'sk-ex', width: '100%' },
+  { name: 'CSS', level: 'Expert', badge: 'sk-ex', width: '100%' },
+  { name: 'JavaScript', level: 'Advanced', badge: 'sk-av', width: '88%' },
+  { name: 'Ruby', level: 'Advanced', badge: 'sk-av', width: '86%' },
+  { name: 'SQL', level: 'Advanced', badge: 'sk-av', width: '82%' },
+  { name: 'Figma', level: 'Advanced', badge: 'sk-av', width: '80%' },
+  { name: 'WordPress', level: 'Advanced', badge: 'sk-av', width: '78%' },
+  { name: 'Python', level: 'Intermediate', badge: 'sk-inter', width: '66%' },
+  { name: 'Node JS', level: 'Intermediate', badge: 'sk-inter', width: '68%' },
+  { name: 'React Native', level: 'Learning', badge: 'sk-learning', width: '45%' },
+];
+
 const Skills = () => {
   return (
     <div className="home-div">
@@ -20,60 +36,27 @@ const Skills = () => {
               <h2>Skills</h2>
             </div>  
             <div className="skills-grid">
-              <div className="skill-item">
-                <span className="skill">HTML <span className="val sk sk-ex">Expert</span></span>
-                <div className="progress bar" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                  <div className="progress-bar custom-color" style={ {width: "100%"} }></div>
+              {skills.map((skill) => (
+                <div className="skill-item" key={skill.name}>
+                  <span className="skill">{skill.name} <span className={`val sk ${skill.badge}`}>{skill.level}</span></span>
+                  <div className="progress bar" role="progressbar" aria-label={`${skill.name} ${skill.level}`}>
+                    <div className="progress-bar custom-color" style={{ width: skill.width }}></div>
+                  </div>
                 </div>
-              </div>
-              <div className="skill-item">
-                <span className="skill">RUBY <span className="val sk sk-av">ADVANCED</span></span>
-                <div className="progress bar" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                  <div className="progress-bar custom-color" style={ {width: "100%"} }></div>
-                </div>
-              </div>
-              <div className="skill-item">
-                <span className="skill">sql <span className="val sk sk-av">Advanced</span></span>
-                <div className="progress bar" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                  <div className="progress-bar custom-color" style={ {width: "100%"} }></div>
-                </div>
-              </div>
-              <div className="skill-item">
-                <span className="skill">CSS <span className="val sk sk-ex">Expert</span></span>
-                <div className="progress bar" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                  <div className="progress-bar custom-color" style={ {width: "100%"} }></div>
-                </div>
-              </div>
-              <div className="skill-item">
-                <span className="skill">python <span className="val sk sk-inter">Intermediate</span></span>
-                <div className="progress bar" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                  <div className="progress-bar custom-color" style={ {width: "100%"} }></div>
-                </div>
-              </div>
-              <div className="skill-item">
-                <span className="skill">Node JS <span className="val sk sk-inter">Intermediate</span></span>
-                <div className="progress bar" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                  <div className="progress-bar custom-color" style={ {width: "100%"} }></div>
-                </div>
-              </div>
-              <div className="skill-item">
-                <span className="skill">JAVASCRIPT <span className="val sk sk-av">Advanced</span></span>
-                <div className="progress bar" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                  <div className="progress-bar custom-color" style={ {width: "100%"} }></div>
-                </div>
-              </div>
-              <div className="skill-item">
-                <span className="skill">FIGMA <span className="val sk sk-av">Advanced</span></span>
-                <div className="progress bar" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                  <div className="progress-bar custom-color" style={ {width: "100%"} }></div>
-                </div>
-              </div>
-              <div className="skill-item">
-                <span className="skill">Wordpress <span className="val sk sk-av">Advanced</span></span>
-                <div className="progress bar" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                  <div className="progress-bar custom-color" style={ {width: "100%"} }></div>
-                </div>
-              </div>
+              ))}
+            </div>
+          </div>
+          <div className="learning-card">
+            <div>
+              <span className="learning-label">Currently learning</span>
+              <h3>React Native mobile development</h3>
+              <p>I am building on my React foundation with Expo, React Navigation, mobile-first UI patterns, NativeWind styling, device testing, and TypeScript-friendly app structure. Same logic muscles, smaller screens, more opinions from thumbs.</p>
+            </div>
+            <div className="learning-pills">
+              <span>Expo</span>
+              <span>React Navigation</span>
+              <span>NativeWind</span>
+              <span>Mobile UI</span>
             </div>
           </div>
           <div className="interests-container">
@@ -88,8 +71,8 @@ const Skills = () => {
                 </div>
               </div>
               <div>
-                <div className="icon-box longer">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/64px-Tailwind_CSS_Logo.svg.png" alt="Tailwind logo" style={{ width: "30px", height: "30px"}}></img>
+                <div className="icon-box">
+                  <SiTailwindcss aria-hidden="true" />
                   <h3>Tailwind CSS</h3>
                 </div>
               </div>
@@ -109,6 +92,30 @@ const Skills = () => {
                 <div className="icon-box longer">
                   <img src={ReactImg} alt="React logo" style={{ width: "30px", height: "30px"}} />
                   <h3>React & Redux</h3>
+                </div>
+              </div>
+              <div>
+                <div className="icon-box highlight-skill">
+                  <SiReact aria-hidden="true" />
+                  <h3>React Native</h3>
+                </div>
+              </div>
+              <div>
+                <div className="icon-box highlight-skill">
+                  <SiExpo aria-hidden="true" />
+                  <h3>Expo</h3>
+                </div>
+              </div>
+              <div>
+                <div className="icon-box highlight-skill">
+                  <TbRoute aria-hidden="true" />
+                  <h3>React Navigation</h3>
+                </div>
+              </div>
+              <div>
+                <div className="icon-box highlight-skill">
+                  <SiTypescript aria-hidden="true" />
+                  <h3>TypeScript</h3>
                 </div>
               </div>
               <div>
