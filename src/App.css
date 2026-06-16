@@ -415,15 +415,21 @@
     @apply mt-10 grid gap-6 rounded-3xl border border-accent/30 bg-gradient-to-br from-accent/15 via-white/[0.05] to-cyan-400/10 p-6 shadow-2xl shadow-black/20 md:grid-cols-[1fr_auto];
   }
 
+  .wordpress-card {
+    @apply mt-5 grid gap-6 rounded-3xl border border-white/10 bg-white/[0.05] p-6 shadow-2xl shadow-black/20 backdrop-blur-sm md:grid-cols-[1fr_auto];
+  }
+
   .learning-label {
     @apply mb-3 inline-flex rounded-full bg-accent px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-black;
   }
 
-  .learning-card h3 {
+  .learning-card h3,
+  .wordpress-card h3 {
     @apply m-0 text-2xl font-bold text-white sm:text-3xl;
   }
 
-  .learning-card p {
+  .learning-card p,
+  .wordpress-card p {
     @apply mb-0 mt-3 max-w-3xl text-base leading-7 text-white/75;
   }
 

@@ -10,7 +10,7 @@ import Jest from '../assets/jest.png'
 import JQuery from '../assets/jquery.png'
 import Django from '../assets/django.png'
 import Bootstrap from '../assets/bootstrap.png'
-import { SiExpo, SiReact, SiTailwindcss, SiTypescript } from 'react-icons/si'
+import { SiExpo, SiReact, SiTailwindcss, SiTypescript, SiWordpress } from 'react-icons/si'
 import { TbRoute } from 'react-icons/tb'
 
 const skills = [
@@ -20,7 +20,7 @@ const skills = [
   { name: 'Ruby', level: 'Advanced', badge: 'sk-av', width: '86%' },
   { name: 'SQL', level: 'Advanced', badge: 'sk-av', width: '82%' },
   { name: 'Figma', level: 'Advanced', badge: 'sk-av', width: '80%' },
-  { name: 'WordPress', level: 'Advanced', badge: 'sk-av', width: '78%' },
+  { name: 'WordPress', level: 'Expert', badge: 'sk-ex', width: '92%' },
   { name: 'Python', level: 'Intermediate', badge: 'sk-inter', width: '66%' },
   { name: 'Node JS', level: 'Intermediate', badge: 'sk-inter', width: '68%' },
   { name: 'React Native', level: 'Learning', badge: 'sk-learning', width: '45%' },
@@ -59,6 +59,19 @@ const Skills = () => {
               <span>Mobile UI</span>
             </div>
           </div>
+          <div className="wordpress-card">
+            <div>
+              <span className="learning-label">WordPress strength</span>
+              <h3>Custom templates, Local workflows, and clean site builds</h3>
+              <p>I can develop custom WordPress templates using Local, customize existing themes, and build polished sites from WordPress-provided templates. Sometimes the fastest path is custom code; sometimes it is knowing which template not to fight.</p>
+            </div>
+            <div className="learning-pills">
+              <span>Local</span>
+              <span>Custom templates</span>
+              <span>Theme customization</span>
+              <span>WordPress CMS</span>
+            </div>
+          </div>
           <div className="interests-container">
             <div className="section-title">
               <h2 className="interests-title">Interests</h2>
@@ -68,6 +81,12 @@ const Skills = () => {
                 <div className="icon-box">
                  <img src={Bootstrap} alt="Boostrap logo" style={{ width: "30px", height: "30px"}}></img>
                  <h3>Bootstrap</h3>
+                </div>
+              </div>
+              <div>
+                <div className="icon-box highlight-skill">
+                  <SiWordpress aria-hidden="true" />
+                  <h3>WordPress</h3>
                 </div>
               </div>
               <div>
