@@ -11,6 +11,8 @@ import {
  } from '@fortawesome/free-brands-svg-icons';
 
 const SideCard = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <div className="left-sidebar">
         <div className="side-bar-header">
@@ -20,7 +22,7 @@ const SideCard = () => {
         <img className="sideImage" src={myImage} alt="my logo" />
         <h2 className="email">leeegd99@gmail.com</h2>
         <h2 className="address">Based in CapeTown, SA</h2>
-        <p className="copyright"> @2023 Leslie. Built with care and a suspicious amount of coffee.</p>
+        <p className="copyright"> @{currentYear} Leslie. Built with care and a suspicious amount of coffee.</p>
         <div className="social-profile">
       <a href="https://github.com/Leeoasis" target="_blank" rel="noopener noreferrer">
         <FontAwesomeIcon icon={faGithub} />

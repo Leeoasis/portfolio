@@ -7,6 +7,7 @@ import SkillsPage from './routes/SkillsPage';
 import AboutPage from './routes/AboutPage';
 import ContactPage from './routes/ContactPage';
 import MobileFooter from './components/MobileFooter';
+import WhatsAppWidget from './components/WhatsAppWidget';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <Route path="/about" element={<AboutPage />} />
       <Route path="/contact" element={<ContactPage />} />
     </Routes>
+    <WhatsAppWidget />
     <MobileFooter />
     </Router>
    </>

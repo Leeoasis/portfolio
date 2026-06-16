@@ -51,7 +51,7 @@ for (const viewport of viewports) {
         });
 
       const boxes = {};
-      for (const selector of ['.navbar-container', '.sidecard-container', '.content', '.home-heading', '.contact-form', '.projects-grid']) {
+      for (const selector of ['.navbar-container', '.sidecard-container', '.content', '.home-heading', '.contact-form', '.projects-carousel']) {
         const el = document.querySelector(selector);
         if (!el) continue;
         const rect = el.getBoundingClientRect();

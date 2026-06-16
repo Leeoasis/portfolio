@@ -16,7 +16,7 @@ const focusAreas = [
   'Full-stack web apps with React and Rails',
   'Responsive interfaces with Tailwind CSS',
   'WordPress sites, custom templates, and template-based builds',
-  'Backend APIs, SQL, and practical integrations',
+  'Backend APIs, PostgreSQL, and practical integrations',
   'React Native, Expo, and mobile UI fundamentals',
 ];
 
@@ -48,7 +48,7 @@ const About = () => {
                   I enjoy turning messy requirements into focused, usable software. I care about clean interfaces, reliable backend logic, and collaborating well with the people around the product. Translation: I like making things work, then making them feel good to use.
                 </p>
                 <p className="about-para">
-                  My experience spans React, JavaScript, Ruby on Rails, SQL, API tooling, WordPress, and mentoring junior developers. I am comfortable building custom WordPress templates locally with Local, as well as shaping fast, polished sites from existing WordPress themes and templates. I am also expanding into mobile development with React Native, Expo, React Navigation, and NativeWind so I can bring the same product thinking to mobile apps.
+                  My experience spans React, JavaScript, Ruby on Rails, PostgreSQL, API tooling, WordPress, and mentoring junior developers. I am comfortable building custom WordPress templates locally with Local, as well as shaping fast, polished sites from existing WordPress themes and templates. I am also expanding into mobile development with React Native, Expo, React Navigation, and NativeWind so I can bring the same product thinking to mobile apps.
                 </p>
 
                 <div className="about-stat-grid">

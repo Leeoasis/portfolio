@@ -67,6 +67,18 @@
     @apply shrink-0 rounded-full bg-accent px-5 py-2 text-sm font-bold uppercase text-black no-underline;
   }
 
+  .whatsapp-widget {
+    @apply fixed bottom-24 right-4 z-[60] inline-flex items-center gap-2 rounded-full border border-emerald-300/30 bg-[#25D366] px-4 py-3 text-sm font-bold text-black no-underline shadow-2xl shadow-black/30 transition duration-300 hover:-translate-y-1 hover:bg-emerald-300 hover:text-black sm:right-6 lg:bottom-8 lg:right-10;
+  }
+
+  .whatsapp-widget svg {
+    @apply h-5 w-5;
+  }
+
+  .whatsapp-widget span {
+    @apply hidden sm:inline;
+  }
+
   .main-nav {
     @apply hidden rounded-full border border-white/10 bg-midnight/60 px-5 py-3 shadow-2xl shadow-black/30 backdrop-blur-md lg:block;
   }
@@ -462,19 +474,40 @@
   }
 
   .projects-container {
-    @apply mb-8 max-w-6xl text-center lg:text-left;
+    @apply mb-8 flex max-w-6xl flex-col gap-5 text-center sm:flex-row sm:items-end sm:justify-between lg:text-left;
   }
 
   .project-intro {
     @apply mx-auto max-w-2xl text-lg leading-8 text-accent lg:mx-0;
   }
 
-  .projects-grid {
-    @apply grid max-w-6xl gap-5 md:grid-cols-2;
+  .project-carousel-controls {
+    @apply flex items-center justify-center gap-3 sm:justify-end;
+  }
+
+  .project-carousel-controls button {
+    @apply grid h-11 w-11 place-items-center rounded-full border border-white/15 bg-white/[0.08] text-white transition duration-300 hover:border-accent hover:bg-accent hover:text-black;
+  }
+
+  .project-carousel-controls button:disabled {
+    @apply cursor-not-allowed opacity-35 hover:border-white/15 hover:bg-white/[0.08] hover:text-white;
+  }
+
+  .project-carousel-count {
+    @apply min-w-12 text-center text-sm font-bold text-white/70;
+  }
+
+  .projects-carousel {
+    @apply grid max-w-6xl auto-cols-[100%] grid-flow-col gap-5 overflow-x-auto scroll-smooth pb-3 snap-x snap-mandatory md:auto-cols-[calc((100%-1.25rem)/2)] xl:auto-cols-[calc((100%-2.5rem)/3)];
+    scrollbar-width: none;
+  }
+
+  .projects-carousel::-webkit-scrollbar {
+    display: none;
   }
 
   .project-card {
-    @apply flex h-full flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/[0.05] p-4 shadow-xl shadow-black/20 backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-accent/50 hover:bg-white/[0.08];
+    @apply flex h-full snap-start flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/[0.05] p-4 shadow-xl shadow-black/20 backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-accent/50 hover:bg-white/[0.08];
   }
 
   .project-card video {
@@ -502,16 +535,48 @@
     @apply min-w-24 px-5 py-2 text-sm;
   }
 
+  .contact-shell {
+    @apply grid max-w-5xl gap-5 lg:grid-cols-[0.8fr_1.2fr] lg:items-stretch;
+  }
+
+  .contact-copy {
+    @apply flex h-full flex-col justify-between rounded-3xl border border-white/10 bg-white/[0.04] p-5 backdrop-blur-sm sm:p-7;
+  }
+
   .contact-heading {
-    @apply mb-3 text-center lg:text-left;
+    @apply mb-4 max-w-3xl text-left text-3xl font-bold normal-case leading-tight text-white sm:text-5xl;
   }
 
   .contact-intro {
-    @apply mx-auto mb-6 max-w-3xl text-center text-base leading-7 text-white/75 sm:text-lg lg:mx-0 lg:text-left;
+    @apply mb-6 max-w-2xl text-left text-base leading-8 text-white/75 sm:text-lg;
+  }
+
+  .contact-detail-list {
+    @apply mt-auto grid gap-3;
+  }
+
+  .contact-detail-card {
+    @apply flex min-w-0 items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.05] px-4 py-3;
+  }
+
+  .contact-detail-card svg {
+    @apply shrink-0 text-lg text-accent;
+  }
+
+  .contact-detail-card span {
+    @apply block break-words text-sm leading-6 text-white/75;
+  }
+
+  .contact-panel {
+    @apply rounded-3xl border border-white/10 bg-white/[0.04] p-5 backdrop-blur-sm sm:p-7;
   }
 
   .contact-form {
-    @apply mx-auto max-w-3xl rounded-[28px] border border-white/20 bg-white/[0.04] p-5 shadow-2xl shadow-black/30 backdrop-blur-sm sm:p-8 lg:mx-0;
+    @apply m-0;
+  }
+
+  .form-row {
+    @apply grid gap-4 md:grid-cols-2;
   }
 
   .form-group {
@@ -519,28 +584,48 @@
   }
 
   .form-group label {
-    @apply mb-2 block font-bold text-accent;
+    @apply mb-2 block text-sm font-bold uppercase tracking-wide text-accent;
   }
 
   .form-group input,
   .form-group textarea {
-    @apply w-full rounded-2xl border border-white/15 bg-white px-4 py-3 text-black outline-none ring-accent/40 transition focus:ring-4;
+    @apply w-full rounded-2xl border border-white/10 bg-midnight/45 px-4 py-3 text-white outline-none ring-accent/30 transition placeholder:text-white/35 focus:border-accent/60 focus:bg-midnight/60 focus:ring-4;
   }
 
   .form-group textarea {
-    @apply min-h-40 resize-y;
+    @apply min-h-44 resize-y;
   }
 
   .submit-btn {
-    @apply w-full px-8 py-3 uppercase sm:w-auto;
+    @apply w-full gap-2 px-8 py-3 uppercase sm:w-auto;
+  }
+
+  .submit-btn:disabled {
+    @apply cursor-wait opacity-70 hover:bg-accent hover:text-black;
+  }
+
+  .success-card {
+    @apply grid min-h-[24rem] place-items-center rounded-3xl border border-white/10 bg-midnight/45 p-6 text-center;
+  }
+
+  .success-card svg {
+    @apply h-12 w-12 text-accent;
   }
 
   .success-message {
-    @apply text-center text-2xl font-semibold text-accent lg:text-left;
+    @apply m-0 text-2xl font-semibold text-accent;
+  }
+
+  .success-card span {
+    @apply max-w-md text-base leading-7 text-white/75;
   }
 
   .error-message {
     @apply mt-2 text-sm font-semibold text-red-300;
+  }
+
+  .send-error-message {
+    @apply mb-4 rounded-2xl border border-red-300/30 bg-red-400/10 px-4 py-3 text-sm font-semibold leading-6 text-red-100;
   }
 
   @keyframes slideInFromLeft {

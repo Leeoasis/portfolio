@@ -18,7 +18,7 @@ const skills = [
   { name: 'CSS', level: 'Expert', badge: 'sk-ex', width: '100%' },
   { name: 'JavaScript', level: 'Advanced', badge: 'sk-av', width: '88%' },
   { name: 'Ruby', level: 'Advanced', badge: 'sk-av', width: '86%' },
-  { name: 'SQL', level: 'Advanced', badge: 'sk-av', width: '82%' },
+  { name: 'PostgreSQL', level: 'Advanced', badge: 'sk-av', width: '82%' },
   { name: 'Figma', level: 'Advanced', badge: 'sk-av', width: '80%' },
   { name: 'WordPress', level: 'Expert', badge: 'sk-ex', width: '92%' },
   { name: 'Python', level: 'Intermediate', badge: 'sk-inter', width: '66%' },
@@ -158,7 +158,7 @@ const Skills = () => {
               <div>
                 <div className="icon-box longer">
                   <img src={Postgres} alt="Postgres logo" style={{ width: "30px", height: "30px"}} />
-                  <h3>Pg Admin</h3>
+                  <h3>PostgreSQL / pgAdmin</h3>
                 </div>
               </div>
               <div>
