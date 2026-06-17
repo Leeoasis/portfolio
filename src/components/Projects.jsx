@@ -76,15 +76,17 @@ const Projects = () => {
             </div>
           </div>
           <div className="projects-carousel" ref={carouselRef}>
-              {ProjectsData.map((val, ind) => {
+              {ProjectsData.map((val) => {
                 return (
                   <ProjectsCard
-                    key={ind}
+                    key={val.title}
                     imgsrc={val.imgsrc}
                     title={val.title}
                     text={val.text}
+                    stack={val.stack}
                     live={val.live}
                     source={val.source}
+                    codeAvailableOnRequest={val.codeAvailableOnRequest}
                   />
                 );
               })}
